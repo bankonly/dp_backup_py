@@ -15,7 +15,7 @@ PROD_SERVER_PASSWORD = os.getenv("PROD_SERVER_PASSWORD")
 PROD_SERVER_IP = os.getenv("PROD_SERVER_IP")
 PROD_SERVER_USER = os.getenv("PROD_SERVER_USER")
 
-command = "sshpass -p {password} scp -r root@{server_ip}:/root/DB/{path} /d/db_backup".format(
+command = "sshpass -p '{password}' scp -r root@{server_ip}:/root/DB/{path} /d/db_backup".format(
     server_ip=PROD_SERVER_IP, path=target_folder_download, password=PROD_SERVER_PASSWORD)
 
 # Detect OS
