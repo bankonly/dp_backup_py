@@ -8,7 +8,7 @@ from pexpect import popen_spawn
 load_dotenv(dotenv_path="./.env")
 
 # target download folder name
-target_folder_download = datetime.today().strftime('%Y-%m-%d-00-00')
+target_folder_download = datetime.today().strftime('%Y-%m-%d-%h')
 
 # Store key
 PROD_SERVER_PASSWORD = os.getenv("PROD_SERVER_PASSWORD")
